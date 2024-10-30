@@ -1,0 +1,66 @@
+.main-footer {
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 20px;
+
+  padding: 0 20px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+  }
+
+  &__logo-text {
+    flex-shrink: 0;
+  }
+
+  &__social {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 24px;
+
+    min-width: 132px;
+    min-height: 22px;
+
+    border-top: 1px solid $specify-light-grey;
+  }
+
+  &__logo-academy {
+    display: flex;
+    align-items: center;
+
+    width: 27px;
+    height: 34px;
+
+    font-size: 16px;
+    line-height: 20px;
+    color: $accent-dark-grey;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      opacity: 0.8;
+      fill: $primary;
+    }
+
+    &:focus-visible {
+      opacity: 0.8;
+      fill: $primary;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 0.3;
+      fill: $primary;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.main-header {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+  padding: 0 20px;
+
+  &__container {
+    text-align: center;
+  }
+}

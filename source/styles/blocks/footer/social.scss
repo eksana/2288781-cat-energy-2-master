@@ -1,0 +1,21 @@
+.social {
+  .social-list {
+    list-style-type: none;
+  }
+
+  // &__item {
+  // }
+
+  // &__link {
+  // }
+
+  &__link--vkontakte {
+    mask-image: url("../icons/icon-vkontakte.svg");
+  }
+
+  // &__link--youtube {
+  // }
+
+  // &__link--telegram {
+  // }
+}
