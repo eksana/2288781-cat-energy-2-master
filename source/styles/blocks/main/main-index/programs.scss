@@ -3,7 +3,8 @@
 
   &__wrapper {
     display: grid;
-    grid-template-rows: 280px 1fr;
+    grid-template-rows: repeat(2, 266px);
+    justify-content: space-between;
     gap: 20px;
 
     height: 552px;
