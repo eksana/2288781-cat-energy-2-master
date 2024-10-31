@@ -3,6 +3,9 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
+
   box-sizing: border-box;
   outline: 1px solid #511029; // для себя, потом удалю
 }
@@ -10,18 +13,23 @@
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  max-width: 320px;
+  min-height: 100vh;
+  margin: 0 auto;
 
   font-family: $base-font-size;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+
+  background-color: $tomato;
+}
+
+main {
+  flex-grow: 1;
 }
 
 img {
