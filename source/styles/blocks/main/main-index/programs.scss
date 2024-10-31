@@ -1,6 +1,12 @@
 .programs {
+  background-color: $white;
+
   &__wrapper {
     display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    padding: 0 20px;
   }
 
   &__title {
@@ -11,6 +17,8 @@
   }
 
   &__list {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
   }
 
