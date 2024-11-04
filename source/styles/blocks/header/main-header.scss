@@ -1,25 +1,29 @@
 .main-header {
-  position: relative;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100%;
-  min-height: 66px;
-  padding: 0 20px;
-
-  &__container {
-    text-align: center;
-  }
-
   &__navigation {
-    position: relative;
+    @media (min-width: $width-tablet) {
+      position: relative;
+
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 20px;
+
+      width: $width-tablet-content;
+      margin: 0 auto;
+      padding: 25px 0;
+    }
+
+    @media (min-width: $width-pre-desktop) {
+      width: $width-desktop-content;
+      padding: 54px 0 25px;
+    }
   }
 
-  &__navigation--opened {
-    position: relative;
+  &__navigation--index-page {
+    @media (min-width: $width-pre-desktop) {
+      display: grid;
+      grid-template-columns: auto 50%;
+      justify-content: space-between;
+    }
   }
 
   &__hero {

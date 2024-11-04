@@ -1,12 +1,11 @@
 /* здесь используйте глобальные переменные */
 
-// Primary colors
+// Основные цвета
 $white: #ffffff;
 $black: #000000;
 $primary: #68b738;
-$primary-fon: rgba($primary, 0.85);
 
-// Additional colors
+// Дополнительные цвета
 $accent-light-grey: #f2f2f2;
 $very-light-grey: #eaeaea;
 $extra-light-grey: #e6e6e6;
@@ -18,12 +17,26 @@ $very-dark-grey: #666666;
 $extra-dark-grey: #111111;
 $specify-dark-grey: #222222;
 $hover: #3e3e3e;
+$hover-green: #5eaa2f;
 $active: #6b6b6b;
+$primary-fon: rgba($primary, 0.85);
 
+// Брейкпоинты
+$width-mobile: 320px;
+$width-tablet: 780px;
+$width-desktop: 1440px;
 
-$tomato: #ff6347; //для себя
+// Отступы от края вьюпорта
+$width-mobile-padding: 20px;
+$width-tablet-padding: 30px;
+$width-tablet-padding-inner: 40px;
+$width-desktop-padding: 110px;
 
-// Viewports
-$mobile-min-width: 320px;
-$tablet-min-width: 780px;
-$desktop-min-width: 1440px;
+// Ширины контентов
+$width-mobile-content: ($width-mobile - 2 * $width-mobile-padding);
+$width-tablet-content: ($width-tablet - 2 * $width-tablet-padding);
+$width-desktop-content: ($width-desktop - 2 * $width-desktop-padding);
+
+// Исключительная ширина некоторых контентов
+$width-max-mobile: ($width-tablet - 1);
+$width-pre-desktop: ($width-desktop-content + 100px);

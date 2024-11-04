@@ -1,7 +1,5 @@
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
 
   min-height: 40px;
 
@@ -9,13 +7,40 @@
   line-height: 20px;
   font-family: $main-font;
 
+  color: $white;
+  background-color: $primary;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   border: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hover-green;
+  }
+
+  &:active {
+    background-color: $hover-green;
+    color: rgba($white, 0.3);
+  }
+}
+
+.button-secondary {
+  background-color: $accent-light-grey;
+  color: $accent-dark-grey;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $extra-light-grey;
+  }
+
+  &:active {
+    color: rgba($accent-dark-grey, 0.3);
+  }
 }
 
 
-@media (min-width: $tablet-min-width) {
+@media screen and (min-width: $width-tablet) and (max-width: $width-desktop) {
   .button {
     min-height: 54px;
 

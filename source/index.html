@@ -7,9 +7,8 @@
     Учебный проект «Кэт энерджи» - главная страница магазина «Кэт энерджи»
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="favicon.ico" />
-  <!-- 32x32 -->
-  <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" /><!-- 32x32 -->
+  <link rel="icon" href="../favicons/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="android-chrome-512.png" sizes="512x512" />
   <link rel="icon" href="apple-touch-icon-180.png" />
   <link rel="icon" href="152.png" sizes="152x152" />
@@ -24,24 +23,24 @@
 
   <h1 class="page__headline visually-hidden">Онлайн-магазин «Кэт энерджи» - главная страница</h1>
 
-  <header class="page__main-header page__main-header--index-page main-header">
+  <header class="page__main-header main-header">
 
-    <div class="main-header__container">
+    <nav class="main-header__navigation main-header__navigation--index-page navigation">
 
-      <nav class="main-header__navigation main-header__navigation--opened navigation">
+      <div class="navigation__position">
 
         <a class="navigation__logo navigation-logo" href="./" aria-current="page">
 
           <div class="navigation-logo__wrapper">
 
             <picture>
-              <source media="(min-width: $desktop-min-width)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg" />
-              <source media="(min-width: $tablet-min-width)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg" />
+              <source media="(min-width: $desktop-width)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg" />
+              <source media="(min-width: $tablet-width)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg" />
               <img class="navigation-logo__image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи»." />
             </picture>
 
             <picture>
-              <source media="(min-width: $desktop-min-width)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg" />
+              <source media="(min-width: $desktop-width)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg" />
               <img class="navigation-logo__image-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile-tablet.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи»." />
             </picture>
 
@@ -53,49 +52,43 @@
           <span class="visually-hidden">Показать меню</span>
         </button>
 
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--current" href="./" aria-current="page">
-              Главная
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="form.html">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
+      </div>
 
-      </nav>
+      <ul class="navigation__site-list navigation__site-list--index  navigation__site-list--opened navigation__site-list--nojs site-list">
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--current" href="./" aria-current="page">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
 
-      <section class="main-header__hero hero">
+    </nav>
 
-        <div class="hero__wrapper">
-          <h2 class="hero__title">Функциональное питание для котов</h2>
-          <p class="hero__slogan">Занялся собой? Займись котом!</p>
-        </div>
+    <section class="main-header__hero hero">
 
-        <picture>
-          <source media="(min-width: $desktop-min-width)" width="552" height="499" type="image/png" srcset="images/index-glass/glass-desktop@1x.png 1x, images/index-glass/glass-desktop@2x.png 2x" />
-          <source media="(min-width: $tablet-min-width)" width="709" height="609" type="image/png" srcset="images/index-glass/glass-tablet@1x.png 1x,
-                images/index-glass/glass-tablet@2x.png 2x" />
-          <img class="hero__image" width="280" height="270" src="images/index-glass/glass-mobile@1x.png" srcset="images/index-glass/glass-mobile@2x.png 2x" alt="Упаковка магазина «Кэт энерджи» в виде стаканчика объемом 1000 г со вкусом курицы." />
-        </picture>
+      <div class="hero__wrapper">
+        <h2 class="hero__title">Функциональное питание для котов</h2>
+        <p class="hero__slogan">Занялся собой? Займись котом!</p>
+      </div>
 
-        <button class="hero__button button" type="button">
-          <a class="button__link" href="form.html">
-            <span class="button__text">Подобрать программу</span>
-          </a>
-        </button>
+      <picture>
+        <source media="(min-width: $desktop-min-width)" width="552" height="499" type="image/png" srcset="images/index-glass/glass-desktop@1x.png 1x, images/index-glass/glass-desktop@2x.png 2x" />
+        <source media="(min-width: $tablet-min-width)" width="709" height="609" type="image/png" srcset="images/index-glass/glass-tablet@1x.png 1x,
+              images/index-glass/glass-tablet@2x.png 2x" />
+        <img class="hero__image" width="280" height="270" src="images/index-glass/glass-mobile@1x.png" srcset="images/index-glass/glass-mobile@2x.png 2x" alt="Упаковка магазина «Кэт энерджи» в виде стаканчика объемом 1000 г со вкусом курицы." />
+      </picture>
 
-      </section>
+      <button class="hero__button button" type="button">
+        <a class="button__link" href="form.html">
+          <span class="button__text">Подобрать программу</span>
+        </a>
+      </button>
 
-    </div>
+    </section>
 
   </header>
 
