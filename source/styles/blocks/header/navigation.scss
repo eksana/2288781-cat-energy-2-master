@@ -2,10 +2,30 @@
   position: relative;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
 
+  width: 320px;
+  margin: 0 auto;
 
-  padding: 0 20px;
+  @media (min-width: $tablet-min-width) {
+    .navigation {
+      display: flex;
+      flex-direction: row;
+
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: $desktop-min-width) {
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+
+      width: 540px;
+      margin: 0 auto;
+    }
+  }
 
   &__toggle {
     display: flex;
@@ -20,6 +40,17 @@
 
     border: none;
     background-color: transparent;
+  }
+
+  &__toggle--closed {
+    width: 24px;
+    height: 24px;
+
+    border: none;
+    background-color: $white;
+    background-image: url("../icons/stack.svg#icon-menu-closed");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
   }
 
   &__opened {
@@ -81,4 +112,23 @@
     color: $primary;
     opacity: 0.8;
   }
+
+  &__icon {
+    background-image: url("../icons/stack.svg#icon-menu-closed.svg");
+    background-size: 24px 24px;
+  }
+
+  // .block {
+  //   background-image: image-set("some-image.png" 1x, "some-image-2x.png" 2x);
+  // }
+
+  // .navigation-icon {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   margin: auto;
+  //   fill: #000000;
+  // }
 }

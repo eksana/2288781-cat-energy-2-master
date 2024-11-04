@@ -2,14 +2,27 @@
   position: relative;
 
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
 
   width: 100%;
-  height: auto;
+  min-height: 66px;
   padding: 0 20px;
 
   &__container {
     text-align: center;
+  }
+
+  &__navigation {
+    position: relative;
+  }
+
+  &__navigation--opened {
+    position: relative;
+  }
+
+  &__hero {
+    position: relative;
   }
 }

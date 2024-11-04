@@ -1,1 +1,6 @@
-<svg viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" stroke-width="2" d="M0 6h18"/><path d="m24 6-6.75 5.2v-10.4l6.75 5.2Z" fill="#000"/></svg>
+<svg viewBox="0 0 32 12" width="32" height="12" fill="colorCurrent" xmlns="http://www.w3.org/2000/svg">
+  <title>Кнопка в виде иконки "Значкок Стрелка"</title>
+  <desc>"Стрелка, открывающая на другое окно, где возможно описывает указанную программу. На данный момент ссылка на это окно не дана."</desc>
+  <path stroke="#000" stroke-width="2" d="M0 6h18"/>
+  <path d="m24 6-6.75 5.2v-10.4l6.75 5.2Z" fill="#000"/>
+</svg>

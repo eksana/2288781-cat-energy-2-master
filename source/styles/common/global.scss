@@ -15,25 +15,16 @@ body {
   height: 100%;
 }
 
-body {
-  max-width: 320px;
-  min-height: 100vh;
-  margin: 0 auto;
-
-  font-family: $base-font-size;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-
-  background-color: $tomato;
-}
-
-main {
-  flex-grow: 1;
-}
-
 img {
   max-width: 100%;
   height: auto;
+
   object-fit: contain;
+  object-position: center;
+  border-style: none;
+}
+
+picture,
+source {
+  display: contents;
 }

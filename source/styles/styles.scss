@@ -12,15 +12,9 @@
 
 /* -header- */
 @import "./blocks/header/main-header.scss";
-@import "./blocks/header/main-header-logo.scss";
-@import "./blocks/header/logo-text.scss";
 @import "./blocks/header/navigation.scss";
+@import "./blocks/header/navigation-logo.scss";
 @import "./blocks/header/hero.scss";
-
-/* -footer- */
-@import "./blocks/footer/main-footer.scss";
-@import "./blocks/footer/footer-logotext.scss";
-@import "./blocks/footer/social.scss";
 
 /* -main-index- */
 @import "./blocks/main/main-index/main-index.scss";
@@ -44,3 +38,9 @@
 @import "./blocks/main/main-inner/card.scss";
 @import "./blocks/main/main-inner/products.scss";
 @import "./blocks/main/main-inner/product.scss";
+
+/* -footer- */
+@import "./blocks/footer/main-footer.scss";
+@import "./blocks/footer/footer-logotext.scss";
+@import "./blocks/footer/social.scss";
+@import "./blocks/footer/logo-academy.scss";

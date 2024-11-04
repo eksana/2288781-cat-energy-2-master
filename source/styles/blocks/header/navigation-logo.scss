@@ -1,4 +1,4 @@
-.main-header-logo {
+.navigation-logo {
   &__wrapper {
     display: flex;
     flex-direction: row;
@@ -19,6 +19,8 @@
 
     width: 33px;
     height: 38px;
+
+    overflow: visible;
   }
 
   &__image-text {
@@ -30,5 +32,7 @@
     height: 18px;
     margin-left: 56px;
     margin-right: 65px;
+
+    overflow: visible;
   }
 }
