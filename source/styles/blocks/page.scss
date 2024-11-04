@@ -4,10 +4,6 @@
   flex-direction: column;
 
   &__body {
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    align-content: start;
-
     min-width: 320px;
     min-height: 100%;
 
@@ -17,8 +13,7 @@
     font-weight: 400;
 
     color: $accent-dark-grey;
-    $bg-orange: #ffa600; // цвет оранжевый
-    background-color: $bg-orange;
+    background-color: $accent-light-grey;
   }
 
   &__headline {
