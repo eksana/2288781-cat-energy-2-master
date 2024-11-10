@@ -1,10 +1,20 @@
 .hero {
-  &__wrapper {
-    min-height: 302px;
-    padding-left: 0;
-    padding-right: 0;
+  min-height: 545px;
+  min-width: 100%;
 
-    background-color: $primary;
+  color: $white;
+  background-image: url("../../../images/index-page/cat-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
   }
 
   &__wrapper::after {
@@ -12,12 +22,7 @@
     position: absolute;
     top: 0;
     left: 0;
-
-    background: url("/images/hero/hero-cat/cat-mobile@2x.jpg") no-repeat center center/cover;
   }
-
-  // &__content {
-  // }
 
   &__title {
     margin: 0;

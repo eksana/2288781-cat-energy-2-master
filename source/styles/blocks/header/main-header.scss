@@ -1,0 +1,29 @@
+.main-header {
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    position: fixed;
+    top: 0;
+
+    width: $width-mobile;
+
+    background-color: $white;
+    z-index: 1;
+  }
+
+  @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+    display: flex;
+    justify-content: space-beetween;
+  }
+
+  @media (min-width: $width-desktop) {
+    position: relative;
+  }
+}
+
+.main-header__navigation {
+  font-family: $main-font;
+  font-size: 20px;
+  line-height: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  width: $width-mobile;
+  min-width: $width-mobile;
   margin: 0;
   padding: 0;
 }
@@ -21,8 +21,4 @@ body {
 img {
   max-width: 100%;
   height: auto;
-
-  object-fit: contain;
-  object-position: center;
-  border-style: none;
 }

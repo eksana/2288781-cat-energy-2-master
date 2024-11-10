@@ -1,31 +1,25 @@
 .button {
   @include button;
 
-  &:hover,
-  &:focus {
-    background-color: $hover-green;
-  }
-
   &:active {
     opacity: 0.3;
   }
 }
 
 .button--green {
-  position: relative;
-
   @include primary-button;
-  padding: 10px 0;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-green;
+  }
 }
 
 .button--gray {
-  position: relative;
-
   @include accent-button;
-  padding: 10px 0;
-}
 
-.button-padding {
-  @include button;
-  padding: 14px 0;
+  &:hover,
+  &:focus {
+    background-color: $extra-light-grey;
+  }
 }
