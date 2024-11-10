@@ -1,50 +1,31 @@
 .button {
-  display: inline-block;
+  @include button;
 
-  min-height: 40px;
-
-  font-size: 16px;
-  line-height: 20px;
-  font-family: $main-font;
-
-  color: $white;
-  background-color: $primary;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  border: none;
-
-  &:hover {
-    cursor: pointer;
+  &:hover,
+  &:focus {
     background-color: $hover-green;
   }
 
   &:active {
-    background-color: $hover-green;
-    color: rgba($white, 0.3);
+    opacity: 0.3;
   }
 }
 
-.button-secondary {
-  background-color: $accent-light-grey;
-  color: $accent-dark-grey;
+.button--green {
+  position: relative;
 
-  &:hover {
-    cursor: pointer;
-    background-color: $extra-light-grey;
-  }
-
-  &:active {
-    color: rgba($accent-dark-grey, 0.3);
-  }
+  @include primary-button;
+  padding: 10px 0;
 }
 
+.button--gray {
+  position: relative;
 
-@media screen and (min-width: $width-tablet) and (max-width: $width-desktop) {
-  .button {
-    min-height: 54px;
+  @include accent-button;
+  padding: 10px 0;
+}
 
-    font-size: 20px;
-    line-height: 26px;
-  }
+.button-padding {
+  @include button;
+  padding: 14px 0;
 }

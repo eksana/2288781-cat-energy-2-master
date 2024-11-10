@@ -1,0 +1,27 @@
+.navigation-menu {
+  margin: 0;
+  padding-left: 0;
+
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  &__item {
+    margin-left: -20px;
+    margin-right: -20px;
+
+    border-top: 1px solid $extra-light-grey;
+  }
+
+  &__link {
+    display: block;
+
+    padding: 22px 0 23px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    color: $black;
+    text-decoration: none;
+  }
+}

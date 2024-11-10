@@ -1,107 +1,28 @@
 .navigation {
-  &__position {
-    @media (max-width: $width-max-mobile) {
-      display: grid;
-      grid-template-columns: 1fr 38px;
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
 
-      width: 320px;
-      margin: 0 auto;
-      padding: 13px 0 14px;
-
-      align-items: center;
-    }
-  }
-
-  &__site-list {
-    margin: 0;
-    padding: 0;
-
-    @media (min-width: $width-tablet) {
-      margin-right: -12px;
-    }
-  }
-
-  &__site-list--index {
-    @media (min-width: $width-pre-desktop) {
-      color: $white;
-    }
-  }
-
-  &--opened {
-    @media (max-width: $width-max-mobile) {
-      display: block;
-    }
-  }
-
-  &--nojs {
-    @media (max-width: $width-max-mobile) {
-      position: initial;
-
-      display: block;
-    }
-  }
-
-  &--index &:not(:link)::after {
-    @media (min-width: $width-pre-desktop) {
-      background-color: $white;
-    }
+    padding: 13px 0 14px;
   }
 
   &__toggle {
     position: relative;
 
-    width: 100%;
-    height: 100%;
-    padding: 7px 0;
+    display: none;
 
-    border: none;
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    padding: 0;
+
+    border: 0;
+    color: $black;
     background-color: transparent;
 
-    @media (min-width: $width-tablet) {
-      display: none;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  &__toggler--opened {
-    &::before,
-    &::after {
-      content: "";
-
-      position: absolute;
-
-      width: 24px;
-      height: 24px;
-
-      background-image: url("../icons/stack.svg#icon-menu-opened");
-      background-repeat: no-repeat;
-      background-size: 24px 24px;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-  }
-
-  .page-header__toggler--closed {
-    &::before {
-      content: "";
-
-      position: absolute;
-
-      width: 18px;
-      height: 18px;
-
-      background-image: url("../icons/stack.svg#icon-menu-closed");
-      background-repeat: no-repeat;
-      background-size: 18px 18px;
-    }
+    background-image: url("../icons/stack.svg#icon-menu-closed");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
   }
 }
+

@@ -25,18 +25,3 @@ $primary-fon: rgba($primary, 0.85);
 $width-mobile: 320px;
 $width-tablet: 780px;
 $width-desktop: 1440px;
-
-// Отступы от края вьюпорта
-$width-mobile-padding: 20px;
-$width-tablet-padding: 30px;
-$width-tablet-padding-inner: 40px;
-$width-desktop-padding: 110px;
-
-// Ширины контентов
-$width-mobile-content: ($width-mobile - 2 * $width-mobile-padding);
-$width-tablet-content: ($width-tablet - 2 * $width-tablet-padding);
-$width-desktop-content: ($width-desktop - 2 * $width-desktop-padding);
-
-// Исключительная ширина некоторых контентов
-$width-max-mobile: ($width-tablet - 1);
-$width-pre-desktop: ($width-desktop-content + 100px);

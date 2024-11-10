@@ -1,5 +1,4 @@
 .page {
-  min-width: 320px;
   min-height: 100%;
 
   font-family: $base-font-size;
@@ -7,8 +6,13 @@
   line-height: 18px;
   font-weight: 400;
 
+  color: $accent-dark-grey;
+  background-color: $white;
+  text-align: center;
+
   &__body {
-    margin: 0;
+    margin: 0 auto;
+    padding: 0;
   }
 
   &__headline {
@@ -17,32 +21,21 @@
     line-height: 60px;
 
     text-align: left;
-    background-color: $white;
     color: $black;
-  }
-
-  &__main-header {
-    font-family: $main-font;
-
     background-color: $white;
   }
 
-  &__main-header--index-page {
-    @media screen and (min-width: $width-mobile) and (max-width: $width-tablet) {
-      background-image: url("../../images/index-page/cat-mobile@1x.jpg");
-      background-repeat: no-repeat;
-    }
-  }
+  &__container {
+    position: relative;
 
-  &__main-index {
-    flex: 1;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-  &__main-inner {
-    flex: 1;
-  }
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
 
-  &__main-footer {
-    background: $accent-light-grey;
+    @include container;
   }
 }
