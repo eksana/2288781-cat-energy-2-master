@@ -13,13 +13,17 @@
 /* -header- */
 @import "./blocks/header/main-header.scss";
 @import "./blocks/header/main-navigation.scss";
-@import "./blocks/header/hero.scss";
+
+
+/* -main- */
+@import "./blocks/main/hero.scss";
 
 /* -main-index- */
 @import "./blocks/main/main-index/main-index.scss";
 @import "./blocks/main/main-index/programs.scss";
 @import "./blocks/main/main-index/reasons.scss";
 @import "./blocks/main/main-index/stats.scss";
+@import "./blocks/main/main-index/slider.scss";
 @import "./blocks/main/main-index/promotions.scss";
 @import "./blocks/main/main-index/addition.scss";
 

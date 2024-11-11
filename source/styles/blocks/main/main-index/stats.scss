@@ -1,76 +1,219 @@
 .stats {
-  // &__wrapper {
-  // }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  &__title {
-    font-family: $main-font;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 40px;
+  padding: 25px 20px 40px;
+
+  background: $extra-light-grey;
+
+  @media (min-width: $width-tablet) {
+    padding: 45px 30px 101px;
+
+    background: linear-gradient($white 619px, $extra-light-grey 619px);
   }
 
-  &__description {
-    font-family: $accent-dark-grey;
+  @media (min-width: $width-desktop) {
+    flex-direction: row;
+    gap: 227px;
+
+    padding: 0 110px 67px;
+
+    background: linear-gradient($white 136px, $extra-light-grey 136px);
+  }
+}
+
+.stats__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  @media (min-width: $width-tablet) {
+    align-items: stretch;
+    margin-bottom: 80px;
   }
 
-  // &__module {
-  // }
+  @media (min-width: $width-desktop) {
+    margin: 0;
+    width: 434px;
+  }
+}
 
-  &__meaning {
-    font-family: $main-font;
-    font-size: 24px;
+.stats__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-family: $main-font;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 60px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 146px;
+  }
+}
+
+.stats__description {
+  margin: 0;
+  margin-bottom: 20px;
+
+  color: $accent-dark-grey;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 55px;
+
+    font-size: 16px;
     line-height: 24px;
   }
 
-  &__number {
-    font-family: $main-font;
-    font-size: 24px;
-    line-height: 24px;
+  @media (min-width: $width-desktop) {
+    margin-bottom: 69px;
+  }
+}
+
+.stats__module {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $width-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 167px;
   }
 
-  &__text {
-    font-family: $main-font;
-    font-size: 24px;
-    line-height: 24px;
+  @media (min-width: $width-desktop) {
+    flex-direction: column;
+  }
+}
 
-    text-transform: uppercase;
+.stats__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 32px;
+
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $width-tablet) {
+    gap: 43px;
   }
 
-  &__action {
-    font-size: 12px;
-    line-height: 12px;
+  @media (min-width: $width-desktop) {
+    margin-bottom: 55px;
   }
+}
 
-  &__costs {
-    font-family: $main-font;
+.stats__item {
+  position: relative;
+  margin: 0;
+
+  width: 124px;
+  height: 70px;
+
+  text-align: center;
+
+  @media (min-width: $width-tablet) {
+    width: 162px;
+    height: 77px;
+  }
+}
+
+.stats__item-number {
+  margin: 0;
+  padding-top: 14.47;
+  padding-bottom: 17.53;
+
+  font-family: $main-font;
+  font-size: 24px;
+  line-height: 24px;
+
+  border: 1px solid $accent-light-grey;
+  border-radius: 3px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 15;
+    padding-bottom: 20;
+
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.stats__item-action {
+  position: absolute;
+  top: 47px;
+  left: 50%;
+
+  margin: 0;
+  padding: 0 22px;
+
+  font-size: 12px;
+  line-height: 12px;
+
+  color: $accent-dark-grey;
+  background-color: $very-light-grey;
+  transform: translate(-50%);
+
+  @media (min-width: $width-tablet) {
+    top: 63px;
+    padding: 0 9px;
+
     font-size: 14px;
+    line-height: 14px;
+
+    white-space: nowrap;
+    background-color: $white;
+  }
+
+  @media (min-width: $width-desktop) {
+    background-color: $very-light-grey;
+  }
+}
+
+.stats__text {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-family: $main-font;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  p {
+    margin: 0;
+  }
+
+  @media (min-width: $width-tablet) {
+    flex-direction: column;
+    align-items: flex-end;
+
+    margin: 11px 0 17px;
+
+    font-size: 20px;
     line-height: 20px;
 
-    text-transform: uppercase;
-    text-align: center;
+    text-align: right;
+
+    p {
+      margin-bottom: 9px;
+    }
   }
 
-  &__price {
-    font-family: $main-font;
-    font-size: 14px;
-    line-height: 20px;
+  @media (min-width: $width-desktop) {
+    flex-direction: row;
+    gap: 63px;
 
-    text-transform: uppercase;
-    text-align: center;
+    margin: 0;
   }
-
-  // &__slider {
-  // }
-
-  // &__image-before {
-  // }
-
-  // &__image-after {
-  // }
-
-  // &__range-bar {
-  // }
-
-  // &__range-toggle {
-  // }
 }

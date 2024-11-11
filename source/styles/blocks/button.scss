@@ -1,25 +1,29 @@
 .button {
   @include button;
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.button--green {
-  @include primary-button;
+  cursor: pointer;
 
   &:hover,
   &:focus {
     background-color: $hover-green;
   }
+
+  &:active {
+    background-color: $hover-green;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--gray {
-  @include accent-button;
+  background-color: $accent-light-grey;
+  color: $accent-dark-grey;
 
   &:hover,
   &:focus {
     background-color: $extra-light-grey;
+  }
+
+  &:active {
+    background-color: $extra-light-grey;
+    color: $accent-dark-grey;
   }
 }
