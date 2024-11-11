@@ -31,48 +31,42 @@
 
         <div class="main-header__logo-content">
 
-          <a class="main-header-logo" href="./" aria-current="page" aria-label="Логотип онлайн-магазина «Кэт энерджи»">
+          <a class="main-header-logo" href="./" aria-current="page" aria-label="Активная главная страница">
 
             <picture>
               <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg" />
               <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg" />
-              <img class="main-header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи»." />
+              <img class="main-header-logo__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи»." />
             </picture>
 
             <picture>
               <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg" />
-              <img class="main-header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile-tablet.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи»." />
+              <img class="main-header-logo__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile-tablet.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи»." />
             </picture>
 
           </a>
 
           <button class="main-header__toggle main-header__toggle--closed" type="button" aria-label="Меню">
             <span class="visually-hidden">Открыть меню</span>
-            <svg viewBox="0 0 24 24" width="24" height="24">
-              <use href="icons/stack.svg#icon-menu-opened"></use>
-            </svg>
           </button>
 
           <button class="main-header__toggle main-header__toggle--opened" type="button" aria-label="Меню">
             <span class="visually-hidden">Скрыть меню</span>
-            <svg viewBox="0 0 24 24" width="24" height="24">
-              <use href="icons/stack.svg#icon-menu-opened"></use>
-            </svg>
           </button>
 
         </div>
 
-        <nav class="main-header__navigation navigation">
+        <nav class="main-navigation main-navigation--closed">
 
-          <ul class="navigation-menu">
-            <li class="navigation-menu__item">
-              <a class="navigation-menu__link navigation-menu__link--index navigation-menu__link--current" href="./" aria-current="page">Главная</a>
+          <ul class="main-navigation__list main-navigation__list--light">
+            <li class="main-navigation__item main-navigation__item--active">
+              <a class="main-navigation__link" href="./" aria-current="page">Главная</a>
             </li>
-            <li class="navigation-menu__item">
-              <a class="navigation-menu__link navigation-menu__link--index" href="catalog.html">Каталог продукции</a>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="navigation-menu__item">
-              <a class="navigation-menu__link navigation-menu__link--index" href="form.html">Подбор программы</a>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
 
