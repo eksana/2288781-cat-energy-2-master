@@ -1,4 +1,6 @@
 .programs__wrapper {
+  display: flex;
+
   padding: 20px;
 
   @media (min-width: $width-tablet) {
@@ -6,6 +8,8 @@
   }
 
   @media (min-width: $width-desktop) {
+    flex-direction: column;
+
     margin-top: 82px;
     padding: 0 110px 71px;
   }
@@ -169,15 +173,27 @@
 
   &:hover {
     color: $primary;
+
+    path {
+      background-color: $primary;
+    }
   }
 
   &:focus {
     color: $primary;
+
+    path {
+      background-color: $primary;
+    }
   }
 
   &:active {
     color: $primary;
     opacity: 0.3;
+
+    path {
+      background-color: $primary;
+    }
   }
 
   &:hover .programs__link-text::after {

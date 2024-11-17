@@ -1,31 +1,11 @@
 .button {
   @include button;
-
-  &:hover {
-    background-color: $hover-green;
-    cursor: pointer;
-  }
-
-  &:focus {
-    background-color: $hover-green;
-  }
-
-  &:active {
-    background-color: $hover-green;
-    color: rgba(255, 255, 255, 0.3);
-  }
-
-  &:disabled {
-    cursor: default;
-    pointer-events: none;
-    background-color: $accent-light-grey;
-    color: $dark-grey;
-  }
 }
 
 .button--gray {
-  background-color: $accent-light-grey;
-  color: $accent-dark-grey;
+  @include button;
+  $bg-color: $accent-light-grey;
+  $text-color: $accent-dark-grey;
 
   &:hover,
   &:focus {

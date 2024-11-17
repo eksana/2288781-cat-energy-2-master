@@ -31,6 +31,8 @@
     }
 
     @media (min-width: $width-desktop) {
+      position: relative;
+
       width: 1440px;
     }
   }

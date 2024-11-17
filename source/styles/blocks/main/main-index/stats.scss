@@ -3,12 +3,12 @@
   flex-direction: column;
   align-items: center;
 
-  padding: 25px 0 40px;
+  padding: 25px 20px 40px;
 
   background: $very-light-grey;
 
   @media (min-width: $width-tablet) {
-    padding: 45px 0 101px;
+    padding: 45px 30px 101px;
 
     background: linear-gradient($white 619px, $extra-light-grey 619px);
     border-top: 1px solid $extra-light-grey;
@@ -18,7 +18,7 @@
     flex-direction: row;
     gap: 227px;
 
-    padding-bottom: 67px;
+    padding: 0 110px 67px;
 
     background: linear-gradient($white 136px, $extra-light-grey 136px);
     border-top: none;
@@ -26,8 +26,6 @@
 }
 
 .stats__wrapper {
-  @include container;
-
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -134,8 +132,8 @@
 
 .stats__item-number {
   margin: 0;
-  padding-top: 14.47;
-  padding-bottom: 17.53;
+  padding-top: 15px;
+  padding-bottom: 18px;
 
   font-family: $main-font;
   font-size: 24px;
@@ -277,42 +275,45 @@
   height: 100%;
 
   background-color: $very-dark-grey;
-  border-radius: 2px;
   z-index: 3;
 
   &:hover {
     background-color: $primary;
   }
 
+  &:hover .stats__range-toggle {
+    color: $primary;
+  }
+
   &:active {
     background-color: rgba($hover-green, 0.6);
+  }
+
+  &:active .stats__range-toggle {
+    color: rgba($hover-green, 0.6);
   }
 }
 
 .stats__range-toggle {
-  position: relative;
-  top: 108px;
-  right: 18px;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: -18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 40px;
   height: 40px;
-  padding: 0;
 
+  border-radius: 100%;
+  text-align: center;
   background-color: $white;
-  border: 2px solid $very-dark-grey;
-  border-radius: 50%;
-
-  @media (min-width: $width-tablet) {
-    top: 236px;
-  }
-}
-
-.stats__range:hover .stats__range-toggle {
-  border-color: $primary;
-}
-
-.stats__range:active .stats__range-toggle {
-  border-color: rgba($hover-green, 0.6);
+  border: 4px currentColor solid;
+  color: currentColor;
+  box-sizing: border-box;
+  cursor: pointer;
+  z-index: 300;
 }
 
 .stats__range-image {
@@ -324,12 +325,4 @@
   height: 18px;
 
   fill: $very-dark-grey;
-}
-
-.stats__range:hover .stats__range-image {
-  border-color: $primary;
-}
-
-.stats__range:active .stats__range-image {
-  border-color: rgba($hover-green, 0.6);
 }
