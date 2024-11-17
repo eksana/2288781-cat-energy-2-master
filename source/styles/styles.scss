@@ -9,32 +9,27 @@
 @import "./blocks/visually-hidden.scss";
 @import "./blocks/page.scss";
 @import "./blocks/button.scss";
-
-
-/* -header- */
-@import "./blocks/header/main-header.scss";
-@import "./blocks/header/main-navigation.scss";
-
-
-/* -main- */
-@import "./blocks/main/hero.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/hero.scss";
 
 /* -main-index- */
-@import "./blocks/main/main-index/main-index.scss";
-@import "./blocks/main/main-index/programs.scss";
-@import "./blocks/main/main-index/reasons.scss";
-@import "./blocks/main/main-index/stats.scss";
+@import "./blocks/main-index/main-index.scss";
+@import "./blocks/main-index/programs.scss";
+@import "./blocks/main-index/reasons.scss";
+@import "./blocks/main-index/stats.scss";
 
 /* -main-inner- */
-@import "./blocks/main/main-inner/main-inner.scss";
-@import "./blocks/main/main-inner/catalog-container.scss";
-@import "./blocks/main/main-inner/catalog.scss";
-@import "./blocks/main/main-inner/card-list.scss";
-@import "./blocks/main/main-inner/card-item.scss";
-@import "./blocks/main/main-inner/card.scss";
-@import "./blocks/main/main-inner/products.scss";
-@import "./blocks/main/main-inner/product.scss";
-
+@import "./blocks/main-inner/main-inner.scss";
+@import "./blocks/main-inner/catalog-container.scss";
+@import "./blocks/main-inner/catalog.scss";
+@import "./blocks/main-inner/card-list.scss";
+@import "./blocks/main-inner/card-item.scss";
+@import "./blocks/main-inner/card.scss";
+@import "./blocks/main-inner/products.scss";
+@import "./blocks/main-inner/product.scss";
+@import "./blocks/main-inner/addition.scss";
+@import "./blocks/main-inner/gift.scss";
+@import "./blocks/main-inner/promotions.scss";
 
 /* -footer- */
 @import "./blocks/footer/main-footer.scss";

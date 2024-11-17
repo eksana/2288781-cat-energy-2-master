@@ -16,27 +16,6 @@
 
     margin: 0;
     padding: 61px 70px;
-
-    .address__text {
-      width: 163px;
-      height: 78px;
-      margin-right: 308px;
-      padding: 1px 0;
-    }
-
-    .address__street {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-end;
-
-
-      width: 157px;
-      height: 80px;
-      margin: 0;
-
-      text-align: right;
-    }
   }
 
   @media (min-width: $width-desktop) {
@@ -51,26 +30,6 @@
 
     background-color: $white;
     z-index: 1;
-
-    .address__text {
-      width: 163px;
-      height: 78px;
-      margin-right: 87px;
-    }
-
-    .address__street {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-
-
-      width: 157px;
-      height: 79px;
-      margin: 0;
-
-      text-align: left;
-    }
   }
 }
 

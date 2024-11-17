@@ -1,26 +1,60 @@
 .channels {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
 
   padding: 40px 20px;
 
   @media (min-width: $width-tablet) {
     flex-direction: row;
+    align-items: center;
 
+    margin-bottom: 0;
     padding: 55px 30px;
   }
 
   @media (min-width: $width-desktop) {
+    margin: 0;
     padding: 66px 110px;
   }
 }
 
 .channels__footer-logotext {
-  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  text-align: center;
+  cursor: pointer;
+
+  img {
+    fill: $extra-dark-grey;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+
+  &::after {
+    content: "";
+
+    display: block;
+
+    width: 280px;
+
+    @media (min-width: $width-tablet) {
+      content: none;
+    }
+  }
 
   @media (min-width: $width-tablet) {
     padding: 0;
@@ -28,33 +62,15 @@
 }
 
 .channels__footer-logotext-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
+  margin: 0 auto;
 }
 
 .channels__list {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
   gap: 24px;
 
-  width: 132px;
-  height: 22px;
-  margin: 0;
-  padding: 0;
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -63,9 +79,21 @@
 
   list-style-type: none;
 
+  &::after {
+    content: "";
+    display: block;
+
+    width: 280px;
+    margin-bottom: 20px;
+
+    background-color: currentColor;
+
+    @media (min-width: $width-tablet) {
+      content: none;
+    }
+  }
+
   @media (min-width: $width-tablet) {
-    width: 132px;
-    height: 22px;
     padding: 8px 0 7px;
 
     border: none;
@@ -118,6 +146,7 @@
   width: 100%;
   padding: 20px 0;
 
+  background-color: $very-dark-grey;
   overflow: visible;
 
   @media (min-width: $width-tablet) {
@@ -126,19 +155,6 @@
     width: auto;
     padding: 0;
   }
-
-  &:hover > .channels__logo-academy-icon {
-    background-color: $hover-green;
-  }
-
-  &:focus > .channels__logo-academy-icon {
-    background-color: $hover-green;
-  }
-
-  &:active {
-    background-color: $hover-green;
-    opacity: 0.3;
-  }
 }
 
 .channels__logo-htmlacademy {
@@ -146,9 +162,28 @@
   justify-content: space-between;
   align-items: center;
 
+  width: 100%;
   margin: 0;
 
   text-decoration: none;
+
+  @media (min-width: $width-tablet) {
+    max-width: 168px;
+    padding: 0;
+  }
+
+  &:hover .channels__logo-academy-icon {
+    background-color: $hover-green;
+  }
+
+  &:focus .channels__logo-academy-icon {
+    background-color: $hover-green;
+  }
+
+  &:active .channels__logo-academy-icon {
+    background-color: $hover-green;
+    opacity: 0.3;
+  }
 }
 
 .channels__logo-academy-text {
