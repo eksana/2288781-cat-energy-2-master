@@ -1,7 +1,6 @@
 .hero {
   position: relative;
 
-
   &::before {
     content: "";
     position: absolute;
@@ -11,7 +10,7 @@
 
     color: $white;
     background-color: $primary-fon;
-    background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@1x.jpg, ../../../images/index-page/cat-mobile@1x.webp"),;
+    background-image: linear-gradient($primary-fon, $primary-fon), url("../../../../images/index-page/cat-mobile@1x.jpg, ../../../../images/index-page/cat-mobile@1x.webp"),;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
@@ -137,6 +136,10 @@
   width: 280px;
   height: 40px;
   padding: 10px 0;
+
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 20px;
 
   order: 4;
 

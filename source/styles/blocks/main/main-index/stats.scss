@@ -327,9 +327,9 @@
 }
 
 .stats__range:hover .stats__range-image {
-  fill: $primary;
+  border-color: $primary;
 }
 
 .stats__range:active .stats__range-image {
-  fill: rgba($hover-green, 0.6);
+  border-color: rgba($hover-green, 0.6);
 }
