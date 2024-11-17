@@ -4,6 +4,7 @@
 @import "./common/fonts.scss";
 @import "./common/global.scss";
 
+
 /* BLOCKS */
 @import "./blocks/visually-hidden.scss";
 @import "./blocks/page.scss";
@@ -23,9 +24,6 @@
 @import "./blocks/main/main-index/programs.scss";
 @import "./blocks/main/main-index/reasons.scss";
 @import "./blocks/main/main-index/stats.scss";
-@import "./blocks/main/main-index/slider.scss";
-@import "./blocks/main/main-index/promotions.scss";
-@import "./blocks/main/main-index/addition.scss";
 
 /* -main-inner- */
 @import "./blocks/main/main-inner/main-inner.scss";
@@ -37,14 +35,9 @@
 @import "./blocks/main/main-inner/products.scss";
 @import "./blocks/main/main-inner/product.scss";
 
-/* --map-- */
-@import "./blocks/main/map/map.scss";
-@import "./blocks/main/map/signboard.scss";
-@import "./blocks/main/map/location.scss";
-@import "./blocks/main/map/pin.scss";
 
 /* -footer- */
 @import "./blocks/footer/main-footer.scss";
-@import "./blocks/footer/footer-logotext.scss";
-@import "./blocks/footer/social.scss";
-@import "./blocks/footer/logo-academy.scss";
+@import "./blocks/footer/map.scss";
+@import "./blocks/footer/address.scss";
+@import "./blocks/footer/channels.scss";

@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    margin-top: 134px;
+    margin-top: 82px;
     padding: 0 110px 71px;
   }
 }
@@ -30,10 +30,15 @@
   }
 }
 
+.programm__list a {
+  text-decoration: none;
+}
+
 .programs__item {
-  padding: 30px 33px 18px 20px;
+  padding: 24px 33px 18px 20px;
 
   background-color: $accent-light-grey;
+  text-align: left;
 
   @media (min-width: $width-tablet) {
     padding: 77px 316px 57px 52px;
@@ -150,12 +155,17 @@
 }
 
 .programs__link {
-  width: 139px;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
 
-  @media (min-width: $width-tablet) {
-    width: 165px;
-  }
+  min-width: 139px;
+  padding: 4px 47px 4px 8px;
+
+  text-decoration: none;
+  cursor: pointer;
+  color: $black;
+  transition: mask-position 0.1s ease-out;
 
   &:hover {
     color: $primary;
@@ -177,37 +187,46 @@
 }
 
 .programs__link-text {
-  position: relative;
-  padding-right: 47px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+
+  min-width: 83px;
+  min-height: 16px;
 
   font-family: $main-font;
   font-size: 16px;
   line-height: 16px;
 
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (min-width: $width-tablet) {
+    min-width: 165px;
     padding-right: 57px;
 
     font-size: 20px;
     line-height: 30px;
   }
 
+  @media (min-width: $width-desktop) {
+    min-width: 168px;
+  }
+
   &::after {
     content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
 
-    width: 32px;
+    width: 24px;
     height: 12px;
 
-    background-image: url("../../icons/stack.svg#icon-arrow");
-    background-repeat: no-repeat;
-    background-size: 32px 12px;
-    background-position: -8px;
+    mask-image: url("../../icons/stack.svg#icon-arrow");
+    mask-repeat: no-repeat;
+    mask-size: 24px 12px;
+    mask-position: 100%;
 
-    transform: translateY(-50%);
-    color: $primary;
+    background-color: $black;
+    transition: all, all 1.3s;
   }
 }

@@ -1,144 +1,152 @@
 .main-header {
-  @media (max-width: 768px) {
-    position: fixed;
-    top: 0;
-
-    width: 320px;
-    background-color: $white;
-    z-index: 1;
-  }
-}
-
-.main-header__wrapper {
-  font-family: $main-font;
-  font-size: 20px;
-  line-height: 20px;
-
-  text-align: center;
-  text-transform: uppercase;
+  position: relative;
 
   @media (min-width: $width-tablet) {
-    display: flex;
-    justify-content: space-between;
-    gap: 94px;
-
-    padding: 25px 34px 0 30px;
+    margin-bottom: 46px;
   }
 
   @media (min-width: $width-desktop) {
-    position: relative;
+    margin-bottom: 60px;
 
-    padding: 55px 110px 0;
-  }
-}
-
-.main-header__wrapper--index {
-  @media (min-width: $width-desktop) {
-    &::after {
-      content: "";
+    &--index {
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0;
 
-      width: 50%;
-      height: 694px;
+      width: 100%;
 
-      color: $white;
-      background-color: $primary-fon;
-      background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: -1;
-
-      @media (min-resolution: 2dppx) {
-        background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-desktop@2x.jpg");
-      }
+      z-index: 2;
     }
   }
 }
 
-.main-header__logo-content {
-  position: relative;
+.main-header__wrapper {
+  @include container;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 13px;
 
-  padding: 13px 21px 14px 20px;
+  padding-top: 10px;
+  padding-bottom: 13px;
 
   @media (min-width: $width-tablet) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 14px;
-
-    padding: 0;
+    padding-top: 2px;
+    padding-bottom: 12px;
   }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 53px;
+    padding-bottom: 10px;
+  }
+}
+
+.main-header__logo {
+  flex-shrink: 0;
 
   &:hover {
     opacity: 0.8;
   }
 
-  &:focus {
-    opacity: 0.8;
+  &:focus-visible {
+    outline: 1px solid $black;
   }
 
   &:active {
     opacity: 0.6;
   }
-}
-
-.main-header-logo {
-  text-decoration: none;
-
-  &--active {
-    pointer-events: none;
-  }
-}
-
-.main-header-logo__logo-text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
 
   @media (min-width: $width-tablet) {
-    position: relative;
+    margin-right: 94px;
   }
 
   @media (min-width: $width-desktop) {
-    position: relative;
+    margin-right: 540px;
   }
 }
 
 .main-header__toggle {
+  position: relative;
+
+  display: block;
+
   width: 24px;
   height: 24px;
-  padding: 4px 0;
 
+  margin-left: auto;
+  padding: 0;
+
+  background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $black;
+
+    transition: all 0.3s ease 0s;
+  }
+
+  &::before {
+    top: -1px;
+  }
+
+  &::after {
+    bottom: -1px;
+  }
+
+  .no-js & {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $black;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $width-tablet) {
     display: none;
   }
 }
 
-.main-header__toggle--opened {
-  mask-image: url("../../icons/stack.svg#icon-menu-opened");
+.main-header__toggle-icon {
+  position: absolute;
+  top: 7px;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
   background-color: $black;
+  transition: all 0.3s ease 0s;
 }
 
-.main-header__toggle--closed {
-  display: none;
+.is-open .main-header__toggle::before {
+  top: 7px;
 
-  width: 18px;
-  height: 18px;
-  padding: 0;
+  transform: rotate(45deg);
+}
 
-  mask-image: url("../../icons/stack.svg#icon-menu-closed");
-  background-color: $black;
-  border-style: none;
+.is-open .main-header__toggle::after {
+  bottom: 7px;
+
+  transform: rotate(-45deg);
+}
+
+.is-open .main-header__toggle-icon {
+  height: 0;
 }

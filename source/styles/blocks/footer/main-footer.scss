@@ -1,74 +1,30 @@
 .main-footer {
   position: relative;
+  top: 0;
+  left: 0;
 
+  background-color: $accent-light-grey;
+  z-index: 1;
+
+  @media (min-width: $width-mobile) {
+    min-width: 320px;
+    min-height: 714px;
+  }
+
+  @media (min-width: $width-tablet) {
+    min-width: 768px;
+    min-height: 547px;
+  }
+
+  @media (min-width: $width-desktop) {
+    min-width: 1440px;
+    min-height: 569px;
+  }
+}
+
+.main-footer__channels {
   display: flex;
   flex-direction: column;
-
-  text-align: center;
-
-  &__container {
-    margin: 40px 0;
-    padding: 0 20px;
-    margin-right: auto;
-    margin-left: auto;
-
-    @media screen and (min-width: $width-mobile) and (max-width: $width-tablet) {
-      width: 280px;
-    }
-  }
-
-  &__logo-text {
-    display: flex;
-    flex-wrap: wrap;
-
-    min-width: 128px;
-  }
-
-  &__social {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 24px;
-
-    min-width: 132px;
-    min-height: 22px;
-
-    border-top: 1px solid $specify-light-grey;
-    border-bottom: 1px solid $specify-light-grey;
-  }
-
-  &__logo-academy {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 27px;
-    height: 34px;
-
-    font-size: 16px;
-    line-height: 20px;
-    color: $accent-dark-grey;
-
-    text-decoration: none;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:focus {
-      opacity: 0.8;
-      fill: $primary;
-    }
-
-    &:focus-visible {
-      opacity: 0.8;
-      fill: $primary;
-      outline: none;
-    }
-
-    &:active {
-      opacity: 0.3;
-      fill: $primary;
-    }
-  }
+  justify-content: space-between;
+  align-items: center;
 }

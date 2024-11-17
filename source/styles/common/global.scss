@@ -13,6 +13,7 @@ body {
 }
 
 body {
+  min-width: 320px;
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -22,8 +23,8 @@ body {
   line-height: 18px;
   font-weight: 400;
 
-  color: $black;
-  background-color: $accent-light-grey;
+  color: $accent-dark-grey;
+  background-color: $white;
 }
 
 img {

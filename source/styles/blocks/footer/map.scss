@@ -1,0 +1,101 @@
+.map {
+  background-color: $white;
+}
+
+.map__address {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  padding: 26px 20px;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 61px 70px;
+
+    .address__text {
+      width: 163px;
+      height: 78px;
+      margin-right: 308px;
+      padding: 1px 0;
+    }
+
+    .address__street {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+
+      width: 157px;
+      height: 80px;
+      margin: 0;
+
+      text-align: right;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+
+    margin-bottom: -200px;
+    padding: 61px 80px 60px;
+
+    width: 565px;
+
+    background-color: $white;
+    z-index: 1;
+
+    .address__text {
+      width: 163px;
+      height: 78px;
+      margin-right: 87px;
+    }
+
+    .address__street {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+
+      width: 157px;
+      height: 79px;
+      margin: 0;
+
+      text-align: left;
+    }
+  }
+}
+
+.map__location {
+  background-color: $white;
+}
+
+.map__location-image {
+  display: block;
+
+  width: 320px;
+  height: 362px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: visible;
+
+  @media (min-width: $width-tablet) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 1440px;
+    height: 400px;
+  }
+}

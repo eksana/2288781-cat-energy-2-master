@@ -1,18 +1,24 @@
 .page {
+  min-width: 320px;
   height: 100%;
 
   &__body {
-    min-width: 320px;
+    min-height: 100%;
 
     background-color: $white;
   }
 
   &__headline {
     font-family: $main-font;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 36px;
+    line-height: 36px;
 
     text-align: left;
+
+    @media (min-width: $width-tablet) {
+      font-size: 60px;
+      line-height: 60px;
+    }
   }
 
   &__wrapper {

@@ -8,18 +8,42 @@
   }
 }
 
+@mixin container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $width-tablet) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 0 110px;
+  }
+}
+
 @mixin button {
-  display: inline-block;
+  display: block;
 
-  font-family: $main-font;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-
-  text-align: center;
+  color: $white;
   text-transform: uppercase;
   text-decoration: none;
-  border-style: none;
+
   background-color: $primary;
-  color: $white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-green;
+  }
+
+  &:focus {
+    outline: 2px solid $black;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
