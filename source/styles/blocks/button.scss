@@ -1,7 +1,3 @@
-.button {
-  @include button;
-}
-
 .button--gray {
   @include button;
   $bg-color: $accent-light-grey;

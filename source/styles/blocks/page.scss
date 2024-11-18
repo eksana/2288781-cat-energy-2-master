@@ -23,6 +23,8 @@
   }
 
   &__wrapper {
+    position: relative;
+
     width: 320px;
     min-height: 100%;
     margin: 0 auto;
@@ -32,8 +34,6 @@
     }
 
     @media (min-width: $width-desktop) {
-      position: relative;
-
       width: 1440px;
     }
   }

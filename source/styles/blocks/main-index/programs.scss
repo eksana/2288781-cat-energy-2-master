@@ -1,6 +1,7 @@
 .programs__wrapper {
   display: flex;
 
+  margin: 0;
   padding: 20px;
 
   @media (min-width: $width-tablet) {
@@ -10,7 +11,7 @@
   @media (min-width: $width-desktop) {
     flex-direction: column;
 
-    margin-top: 82px;
+    margin: 0;
     padding: 0 110px 71px;
   }
 }
