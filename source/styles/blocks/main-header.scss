@@ -3,24 +3,30 @@
 }
 
 .main-header__wrapper {
-  display: grid;
-  grid-template-columns: 33px 101px 24px;
+  @include container;
+
+  display: flex;
   justify-content: space-between;
+  align-items: center;
 
+  @media (max-width: $width-tablet) {
+    position: relative;
 
-  width: 320px;
-  margin: 0 auto;
-  margin-left: auto;
-  padding: 0 20px;
+    min-width: 320px;
+    margin: 0 auto;
+    margin-left: auto;
+    padding-top: 13px;
+    padding-bottom: 14px;
+  }
 
   @media (min-width: $width-tablet) {
-    width: 768px;
-    padding: 0 30px;
+    min-width: 768px;
+    padding-top: 25px;
   }
 
   @media (min-width: $width-desktop) {
-    width: 1440px;
-    padding: 0 110px;
+    min-width: 1440px;
+    padding-top: 55px;
   }
 }
 
@@ -57,12 +63,24 @@
 
 .main-header__logo {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 56px;
 
   width: 190px;
   height: 65px;
+
+  &__logo:hover {
+    opacity: 0.8;
+  }
+
+  &__logo:focus {
+    opacity: 0.8;
+  }
+
+  &__logo:active {
+    opacity: 0.6;
+  }
 }
 
 .main-header__logo-image {
@@ -73,6 +91,8 @@
 .main-header__logo-text {
   width: 101px;
   height: 18px;
+
+  color: $extra-dark-grey;
 }
 
 @media (min-width: $width-tablet) {
@@ -87,6 +107,10 @@
     width: 60px;
     height: 50px;
   }
+
+  .main-header__logo-text {
+    color: $accent-dark-grey;
+  }
 }
 
 @media (min-width: $width-desktop) {
@@ -98,8 +122,8 @@
   }
 
   .main-header__logo-image {
-    width: 60px;
-    height: 50px;
+    width: 70px;
+    height: 59px;
   }
 
   .main-header__logo-text {
@@ -109,10 +133,15 @@
 }
 
 .main-header__list {
-  display: none;
+  position: absolute;
+  top: 65px;
+  left: 0;
 
+  width: 100%;
   margin: 0;
   padding: 0;
+
+  z-index: 3;
 }
 
 .main-header__item {
@@ -121,12 +150,19 @@
 }
 
 .main-header__link {
+  display: block;
+
+  padding: 22px 0 24px;
+
   font-family: $main-font;
   font-size: 20px;
   line-height: 20px;
 
+  color: $black;
+  background-color: $white;
   text-decoration: none;
   text-transform: uppercase;
+  border-bottom: 1px solid $extra-light-grey;
 }
 
 @media (min-width: $width-tablet) {
