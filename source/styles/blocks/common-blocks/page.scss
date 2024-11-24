@@ -1,0 +1,44 @@
+.page {
+  height: 100%;
+
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+
+  overflow-x: hidden;
+  cursor: default;
+
+  background-color: #8a2be2;
+  color: $white;
+}
+
+.page__sprite {
+  display: none;
+}
+
+.page__headline {
+  display: block;
+
+  font-family: $main-font;
+  font-size: 36px;
+  line-height: 36px;
+
+  color: $black;
+  text-align: left;
+
+  @media (min-width: $width-tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.page__main-index,
+.page__main-inner,
+.page__main-form {
+  flex-grow: 1;
+}

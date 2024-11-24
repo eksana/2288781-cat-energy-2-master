@@ -5,6 +5,12 @@
 *::after {
   box-sizing: border-box;
   outline: 1px solid #a01b4e; // для себя, потом удалю
+
+  // outline: 5px solid rgba(255, 0, 0, 0.8);
+  // outline-offset: -3px;
+
+  // outline: 5px solid rgba(0, 255, 0, 0.8);
+  // outline-offset: -5px;
 }
 
 html,
@@ -13,21 +19,16 @@ body {
 }
 
 body {
-  min-width: 320px;
   min-height: 100%;
   margin: 0;
   padding: 0;
-
-  font-family: $base-font-size;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
 
   color: $accent-dark-grey;
   background-color: $white;
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }

@@ -128,7 +128,7 @@
 
   color: $accent-dark-grey;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     position: relative;
 
     padding-bottom: 23px;
@@ -160,10 +160,18 @@
 }
 
 .programs__link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
   width: 139px;
+  margin: 15px 0 18px;
+  padding: 4px 0;
 
   text-decoration: none;
   list-style-type: none;
+
+  color: $black;
 
   @media (min-width: $width-tablet) {
     width: 165px;

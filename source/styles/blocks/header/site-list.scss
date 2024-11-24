@@ -1,0 +1,16 @@
+.site-list {
+  width: 100%;
+  min-width: 320px;
+
+  @media (min-width: $width-tablet) {
+    width: 90%;
+    min-width: 436px;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: 80%;
+    max-width: 475px;
+    margin: auto;
+  }
+}
+

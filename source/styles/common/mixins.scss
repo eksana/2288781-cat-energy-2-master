@@ -9,42 +9,69 @@
 }
 
 @mixin container {
-  width: 100%;
-  min-width: 320px;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
+  min-width: 280px;
+
+  @media (min-width: $width-mobile) {
+    width: auto;
+    padding: 0 20px;
+  }
 
   @media (min-width: $width-tablet) {
+    width: auto;
     padding: 0 30px;
   }
 
-  @media (min-width: $width-desktop) {
+  @media (max-width: $width-desktop) {
+    width: auto;
     padding: 0 110px;
   }
 }
 
-@mixin button ($bg-color: $primary, $text-color: $white) {
-  display: block;
+@mixin center-element($d-f: flex, $j-c: center, $a-i: center) {
+  display: $d-f;
+  justify-content: $j-c;
+  align-items: $a-i;
+}
 
-  color: $text-color;
+@mixin base-button($color: $black, $bg-color: $white) {
+  display: inline-block;
+
+  min-height: 40px;
+  padding: 10px 0;
+
+  color: $color;
   background-color: $bg-color;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  vertical-align: middle;
   border: none;
   cursor: pointer;
+  transition: all 0.15s ease-in;
 
-  &:hover {
-    background-color: $hover-green;
+  @media (min-width: $width-tablet) {
+    padding: 14px;
   }
+}
 
-  &:focus {
-    background-color: $hover-green;
-  }
+@mixin reset-list($margin: 0, $padding: 0, $list-style: none) {
+  margin: $margin;
+  padding: $padding;
+  list-style: $list-style;
+}
 
-  &:active {
-    background-color: $hover-green;
-    color: rgba($white, 0.3);
-  }
+@mixin pseudo-element($content: "", $position: absolute, $display: block) {
+  content: $content;
+  position: $position;
+  display: $display;
+}
+
+@mixin v-center {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 }
