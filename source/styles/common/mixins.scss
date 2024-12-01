@@ -99,3 +99,9 @@
   position: $position;
   display: $display;
 }
+
+@mixin retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @content;
+  }
+}

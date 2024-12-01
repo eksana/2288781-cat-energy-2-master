@@ -1,4 +1,6 @@
 .page {
+  height: 100%;
+
   color: $accent-dark-grey;
   background-color: $accent-light-grey;
 }
@@ -6,6 +8,8 @@
 .page__body {
   display: flex;
   flex-direction: column;
+
+  min-height: 100%;
 
   overflow-x: hidden;
 }
@@ -45,24 +49,27 @@
 }
 
 .page__main-header {
+  position: relative;
+
   @media (min-width: $breakpoint-desktop) {
-    &::before {
-      @include pseudo-element;
-      @include container;
-
-      background-image: url("../../../images/index-page/cat-desktop@1x.jpg, ../../cat-desktop@1x.webp"), linear-gradient(90deg, $white 50%, $primary 50%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: calc(50% + 360px) center, center;
-      z-index: -1;
-
-      @media (min-width: $breakpoint-desktop) and (min-resolution: 144dpi), (min-width: $breakpoint-desktop) and (min-resolution: 1.5dppx) {
-        background-image: url("../../../images/index-page/cat-desktop@2x.jpg, ../../cat-desktop@2x.webp");
-      }
-    }
-
-    @media (min-width: $breakpoint-desktop) {
+    &--index {
       z-index: 0;
+
+      &::before {
+        @include pseudo-element;
+        inset: 0 0 0 calc(50% + 40px);
+
+        background-color: $primary;
+        background-image: url("../../../images/index-page/cat-desktop@1x.jpg, ../../cat-desktop@1x.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right center, center;
+        z-index: -1;
+
+        // @include retina {
+        //   background-image: url("../../../images/index-page/cat-mobile@2x.jpg, ../../../images/index-page/cat-desktop@2x.webp");
+        // }
+      }
     }
   }
 }
