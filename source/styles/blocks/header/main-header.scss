@@ -1,80 +1,106 @@
 .main-header {
+  position: relative;
+  top: 0;
+  right: 1px;
+
   display: flex;
-}
+  flex-direction: column;
+  justify-content: space-between;
 
-.main-header__list {
-  @include reset-list;
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
 
-  @media (min-width: $breakpoint-tablet) {
-    display: none;
-  }
+  color: $black;
+  background-color: $white;
 }
 
 .main-header__wrapper {
+  @include container;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-  width: 100%;
-  margin: 0;
+  min-width: 100%;
 
-  @media (min-width: $breakpoint-mobile) {
-    height: 66px;
+  padding-top: 13px;
+  padding-bottom: 14px;
+}
+
+.main-header__logo {
+  @include a;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 56px;
+
+  min-width: 190px;
+  height: 38px;
+
+  cursor: pointer;
+  text-align: left;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 
   @media (min-width: $breakpoint-tablet) {
-    min-width: 768px;
+    gap: 13px;
+
+    width: 174px;
     height: 50px;
-    padding-top: 25px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    min-width: 1440px;
+    gap: 14px;
+
+    width: 202px;
     height: 59px;
-    padding-top: 55px;
   }
 }
 
-.main-header__wrapper--index {
-  position: relative;
+.main-header__logo-image {
+  width: 33px;
+  height: 38px;
 
-  &::after {
-    @include pseudo-element;
+  @media (min-width: $breakpoint-tablet) {
+    width: 60px;
+    height: 50px;
+  }
 
-    width: 100%;
-    min-width: 320px;
-    height: 302px;
-    margin: 0 -20px;
-
-    background-color: $primary-fon;
-    background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@1x.jpg, ../../cat-mobile@1x.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right center;
-    z-index: -1;
-
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/images/index-page/cat-mobile@2x.jpg, ../../cat-mobile@2x.webp");
-    }
+  @media (min-width: $breakpoint-desktop) {
+    width: 70px;
+    height: 59px;
   }
 }
 
-// .main-header__wrapper--index::after {
-//   @include pseudo-element;
+.main-header__logo-text {
+  width: 101px;
+  height: 18px;
 
-//   inset: 0 0 0 calc(50% + 40px);
+  @media (min-width: $breakpoint-desktop) {
+    width: 118px;
+    height: 21px;
+  }
+}
 
-//   width: 50%;
-//   min-width: 720px;
-//   height: 694px;
-//   margin-bottom: 82px;
+.main-header__navigation {
+  width: 100%;
+  margin: 0;
 
-//   background-color: $primary-fon;
-//   background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-desktop@1x.jpg, ../../cat-desktop@1x.webp");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: right center;
-//   z-index: -10;
-
-//   @media (min-resolution: 2dppx) {
-//     background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/images/index-page/cat-desktop@2x.jpg, ../../cat-desktop@2x.webp");
-//   }
-// }
+  overflow: hidden;
+}

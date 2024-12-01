@@ -16,15 +16,24 @@
 html,
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
+  display: flex;
 
-  color: $accent-dark-grey;
-  background-color: $white;
+  min-width: 320px;
+  min-height: 100%;
+
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+
+  color: $white;
+  background-color: #0000ff;
 }
 
 img {

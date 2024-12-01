@@ -1,44 +1,46 @@
 .stats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include container; //!
 
-  padding: 25px 20px 40px;
+  padding: 25px 0 40px;
 
   background: $very-light-grey;
 
-  @media (min-width: $width-tablet) {
-    padding: 45px 30px 101px;
+  @media (min-width: $breakpoint-tablet) {
+    padding: 45px 0 0;
 
-    background: linear-gradient($white 619px, $extra-light-grey 619px);
+    background: $white;
     border-top: 1px solid $extra-light-grey;
   }
 
-  @media (min-width: $width-desktop) {
-    flex-direction: row;
-    gap: 227px;
+  @media (min-width: $breakpoint-desktop) {
+    width: auto;
 
-    padding: 0 110px 67px;
-
-    background: linear-gradient($white 136px, $extra-light-grey 136px);
     border-top: none;
   }
 }
 
 .stats__wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
 
-  @media (min-width: $width-tablet) {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-wrap: wrap;
     align-items: stretch;
 
-    margin-bottom: 80px;
+    width: 768px;
+
+    // margin-bottom: 80px;
   }
 
-  @media (min-width: $width-desktop) {
-    width: 434px;
-    margin: 0;
+  @media (min-width: $breakpoint-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 30% 55% 1fr;
+    grid-template-rows: 1fr;
+
+    width: 100%;
+    padding: 70px 0 75px;
   }
 }
 
@@ -50,14 +52,14 @@
   font-size: 36px;
   line-height: 40px;
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     margin-bottom: 60px;
 
     font-size: 60px;
     line-height: 60px;
   }
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $breakpoint-desktop) {
     margin-bottom: 146px;
   }
 }
@@ -68,14 +70,14 @@
 
   color: $accent-dark-grey;
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     margin-bottom: 55px;
 
     font-size: 16px;
     line-height: 24px;
   }
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $breakpoint-desktop) {
     margin-bottom: 69px;
   }
 }
@@ -85,14 +87,14 @@
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     column-gap: 167px;
   }
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $breakpoint-desktop) {
     flex-direction: column;
   }
 }
@@ -106,11 +108,11 @@
   margin: 0;
   margin-bottom: 20px;
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     gap: 43px;
   }
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $breakpoint-desktop) {
     margin-bottom: 55px;
   }
 }
@@ -124,7 +126,7 @@
 
   text-align: center;
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     width: 162px;
     height: 77px;
   }
@@ -142,7 +144,7 @@
   border: 1px solid $dark-grey;
   border-radius: 3px;
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     padding-top: 15;
     padding-bottom: 20;
 
@@ -166,7 +168,7 @@
   background-color: $very-light-grey;
   transform: translate(-50%);
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     top: 63px;
     padding: 0 9px;
 
@@ -177,7 +179,7 @@
     background-color: $white;
   }
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $breakpoint-desktop) {
     background-color: $very-light-grey;
   }
 }
@@ -197,7 +199,7 @@
     margin: 0;
   }
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     flex-direction: column;
     align-items: flex-end;
 
@@ -213,7 +215,7 @@
     }
   }
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $breakpoint-desktop) {
     flex-direction: row;
     gap: 63px;
 
@@ -233,7 +235,7 @@
 
   overflow: hidden;
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     width: 560px;
     height: 512px;
   }
@@ -260,7 +262,7 @@
   width: 280px;
   max-width: 280px;
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     width: 560px;
     max-width: 560px;
   }

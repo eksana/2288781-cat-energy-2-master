@@ -20,7 +20,7 @@
     color: $accent-dark-grey;
   }
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     &__text {
       width: 163px;
       height: 78px;
@@ -43,7 +43,7 @@
     }
   }
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     &__text {
       width: 163px;
       height: 78px;

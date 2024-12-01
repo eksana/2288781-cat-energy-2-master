@@ -1,4 +1,6 @@
 .hero {
+  @include container; //!
+
   display: flex;
   // &::before {
   //   @include pseudo-element;
@@ -20,11 +22,11 @@
   //     background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@2x.jpg, ../../../../images/index-page/cat-mobile@2x.webp");
   //   }
 
-  //   @media (min-width: $width-tablet) {
+  //   @media (min-width: $breakpoint-tablet) {
   //     display: none;
   //   }
 
-  //   @media (min-width: $width-desktop) {
+  //   @media (min-width: $breakpoint-desktop) {
   //     position: relative;
   //     top: -188px;
   //     right: 0;
@@ -40,7 +42,7 @@
   //   }
   // }
 
-  // @media (min-width: $width-desktop) {
+  // @media (min-width: $breakpoint-desktop) {
   //   margin-bottom: 82px;
   // }
 }
@@ -51,19 +53,17 @@
 
   //   @include center-element;
 
-  outline: 5px solid opacity(#ff0000, 0.5);
-  outline-offset: -5px;
 
   //   margin: 0;
 
-  //   @media (min-width: $width-tablet) {
+  //   @media (min-width: $breakpoint-tablet) {
   //     align-items: stretch;
 
   //     margin: 0;
   //     margin-top: 65px;
   //   }
 
-  //   @media (min-width: $width-desktop) {
+  //   @media (min-width: $breakpoint-desktop) {
   //     min-height: 694px;
   //     margin: 0;
   //   }
@@ -82,7 +82,7 @@
   // color: $white;
   // text-align: center;
 
-  // @media (min-width: $width-tablet) {
+  // @media (min-width: $breakpoint-tablet) {
   //   width: 420px;
   //   height: 120px;
   //   margin: 0 0 40px 90px;
@@ -94,7 +94,7 @@
   //   text-align: left;
   // }
 
-  // @media (min-width: $width-desktop) {
+  // @media (min-width: $breakpoint-desktop) {
   //   margin-top: 110px;
   // }
 }
@@ -112,7 +112,7 @@
   // text-transform: uppercase;
   // text-align: center;
 
-  // @media (min-width: $width-tablet) {
+  // @media (min-width: $breakpoint-tablet) {
   //   width: 283px;
   //   height: 20px;
   //   margin-bottom: 50px;
@@ -124,7 +124,7 @@
   //   text-align: left;
   // }
 
-  // @media (min-width: $width-desktop) {
+  // @media (min-width: $breakpoint-desktop) {
   //   margin-bottom: 52px;
   // }
 }
@@ -140,7 +140,7 @@
 
   //   order: 4;
 
-  //   @media (min-width: $width-tablet) {
+  //   @media (min-width: $breakpoint-tablet) {
   //     width: 244px;
   //     height: 54px;
   //     margin: 0;
@@ -156,8 +156,6 @@
 
 .hero__image {
 
-  outline: 5px solid opacity(#008000, 0.5);
-  outline-offset: -5px;
 
   // display: block;
 
@@ -166,11 +164,11 @@
 
   // z-index: -1;
 
-  // @media (min-width: $width-tablet) {
+  // @media (min-width: $breakpoint-tablet) {
   //   margin-top: -87px;
   // }
 
-  // @media (min-width: $width-desktop) {
+  // @media (min-width: $breakpoint-desktop) {
   //   position: relative;
   //   left: 557px;
 

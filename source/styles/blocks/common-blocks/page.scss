@@ -1,9 +1,6 @@
 .page {
-  height: 100%;
-
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  color: $accent-dark-grey;
+  background-color: $accent-light-grey;
 }
 
 .page__body {
@@ -11,34 +8,61 @@
   flex-direction: column;
 
   overflow-x: hidden;
-  cursor: default;
-
-  background-color: #8a2be2;
-  color: $white;
-}
-
-.page__sprite {
-  display: none;
 }
 
 .page__headline {
-  display: block;
+  margin: 0;
 
   font-family: $main-font;
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
 
-  color: $black;
   text-align: left;
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     font-size: 60px;
     line-height: 60px;
   }
 }
 
-.page__main-index,
-.page__main-inner,
-.page__main-form {
+.page__main-header,
+.page__main-footer {
+  position: relative;
+  left: 0;
+  right: 0;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page__main {
   flex-grow: 1;
+}
+
+.page__main-header {
+  @media (min-width: $breakpoint-desktop) {
+    &::before {
+      @include pseudo-element;
+      @include container;
+
+      background-image: url("../../../images/index-page/cat-desktop@1x.jpg, ../../cat-desktop@1x.webp"), linear-gradient(90deg, $white 50%, $primary 50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: calc(50% + 360px) center, center;
+      z-index: -1;
+
+      @media (min-width: $breakpoint-desktop) and (min-resolution: 144dpi), (min-width: $breakpoint-desktop) and (min-resolution: 1.5dppx) {
+        background-image: url("../../../images/index-page/cat-desktop@2x.jpg, ../../cat-desktop@2x.webp");
+      }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      z-index: 0;
+    }
+  }
 }
