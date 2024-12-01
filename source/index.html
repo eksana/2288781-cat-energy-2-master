@@ -21,7 +21,7 @@
 
   <h1 class="page__headline visually-hidden">Онлайн-магазин «Кэт энерджи» - главная страница</h1>
 
-  <header class="page__main-header main-header">
+  <header class="page__main-header page__main-header--index main-header">
 
     <div class="main-header__wrapper">
 
@@ -41,7 +41,7 @@
 
       </a>
 
-      <nav class="main-header__navigation navigation">
+      <nav class="main-header__navigation navigation navigation--opened navigation--no-js">
 
         <button class="navigation__toggle toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
@@ -52,7 +52,7 @@
           </div>
         </button>
 
-        <ul class="navigation__main-menu">
+        <ul class="navigation__list navigation__list--index">
           <li class="navigation__item">
             <a class="navigation__link navigation__link--current" href="./">Главная</a>
           </li>
@@ -188,7 +188,7 @@
 
       </div>
 
-      <div class="stats__slider">
+      <div class="stats__slider slider">
 
         <div class="stats__slider-wrapper stats__slider-wrapper--before">
 
@@ -201,15 +201,6 @@
 
         </div>
 
-        <div class="stats__slider-wrapper stats__slider-wrapper--after">
-          <picture>
-            <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="images/cats/cat-tablet-desktop-after@1x.webp 1x, images/cats/cat-tablet-desktop-after@2x.webp 2x">
-            <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="images/cats/cat-mobile-after@1x.webp 1x, images/cats/cat-mobile-after@2x.webp 2x">
-            <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="images/cats/cat-tablet-desktop-after@1x.png 1x, images/cats/cat-tablet-desktop-after@2x.png 2x">
-            <img class="stats__slider-image" width="280" height="256" src="images/cats/cat-mobile-after@1x.png" srcset="images/cats/cat-mobile-after@2x.png 2x" alt="Фото худого кота после приема функционального питания «Кэт энерджи».">
-          </picture>
-        </div>
-
         <div class="stats__range">
           <div class="stats__range-toggle">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="currentColor">
@@ -218,6 +209,15 @@
             </svg>
             <span class="visually-hidden">Смотреть фото до/послe c помощью ползунка</span>
           </div>
+        </div>
+
+        <div class="stats__slider-wrapper stats__slider-wrapper--after">
+          <picture>
+            <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="images/cats/cat-tablet-desktop-after@1x.webp 1x, images/cats/cat-tablet-desktop-after@2x.webp 2x">
+            <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="images/cats/cat-mobile-after@1x.webp 1x, images/cats/cat-mobile-after@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="images/cats/cat-tablet-desktop-after@1x.png 1x, images/cats/cat-tablet-desktop-after@2x.png 2x">
+            <img class="stats__slider-image" width="280" height="256" src="images/cats/cat-mobile-after@1x.png" srcset="images/cats/cat-mobile-after@2x.png 2x" alt="Фото худого кота после приема функционального питания «Кэт энерджи».">
+          </picture>
         </div>
 
       </div>
