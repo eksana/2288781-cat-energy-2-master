@@ -1,4 +1,6 @@
 .navigation {
+  position: relative;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,11 +26,11 @@
 }
 
 .navigation__toggle {
-  overflow: hidden;
-  box-shadow: none;
+  width: 24px;
+  height: 24px;
+  // overflow: hidden;
+  // box-shadow: none;
   border: none;
-  cursor: pointer;
-  z-index: 2;
 
   &:focus {
     outline: none;

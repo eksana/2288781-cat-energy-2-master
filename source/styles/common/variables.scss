@@ -25,3 +25,5 @@ $primary-fon: rgba($primary, 0.85);
 $breakpoint-mobile: 320px;
 $breakpoint-tablet: 780px;
 $breakpoint-desktop: 1440px;
+
+$retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);

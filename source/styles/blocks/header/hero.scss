@@ -1,178 +1,174 @@
 .hero {
-  @include container; //!
+  @include container;
 
   display: flex;
-  // &::before {
-  //   @include pseudo-element;
 
-  //   top: 0;
-  //   left: 0;
-  //   z-index: -1;
+  &::before {
+    @include pseudo-element;
 
-  //   width: 100%;
-  //   height: 302px;
+    top: 0;
+    left: 0;
+    z-index: -1;
 
-  //   background-color: $primary-fon;
-  //   background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@1x.jpg, ../../../../images/index-page/cat-mobile@1x.webp");
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: cover;
+    width: 100%;
+    height: 302px;
 
-  //   @media (min-resolution: 2dppx) {
-  //     background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@2x.jpg, ../../../../images/index-page/cat-mobile@2x.webp");
-  //   }
+    background-color: $primary-fon;
+    background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@1x.jpg, ../../../../images/index-page/cat-mobile@1x.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-  //   @media (min-width: $breakpoint-tablet) {
-  //     display: none;
-  //   }
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@2x.jpg, ../../../../images/index-page/cat-mobile@2x.webp");
+    }
 
-  //   @media (min-width: $breakpoint-desktop) {
-  //     position: relative;
-  //     top: -188px;
-  //     right: 0;
-  //     left: 50%;
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
 
-  //     display: block;
+    @media (min-width: $breakpoint-desktop) {
+      position: relative;
+      top: -188px;
+      right: 0;
+      left: 50%;
 
-  //     width: 50%;
-  //     height: 694px;
+      display: block;
 
-  //     visibility: hidden;
-  //     z-index: -2;
-  //   }
-  // }
+      width: 50%;
+      height: 694px;
 
-  // @media (min-width: $breakpoint-desktop) {
-  //   margin-bottom: 82px;
-  // }
+      visibility: hidden;
+      z-index: -2;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 82px;
+  }
 }
 
 .hero__wrapper {
   display: grid;
-  // grid-template-rows: 111px 270px 40px;
+  grid-template-rows: 111px 270px 40px;
 
-  //   @include center-element;
+  margin: 0;
 
+  @media (min-width: $breakpoint-tablet) {
+    align-items: stretch;
 
-  //   margin: 0;
+    margin: 0;
+    margin-top: 65px;
+  }
 
-  //   @media (min-width: $breakpoint-tablet) {
-  //     align-items: stretch;
-
-  //     margin: 0;
-  //     margin-top: 65px;
-  //   }
-
-  //   @media (min-width: $breakpoint-desktop) {
-  //     min-height: 694px;
-  //     margin: 0;
-  //   }
+  @media (min-width: $breakpoint-desktop) {
+    min-height: 694px;
+    margin: 0;
+  }
 }
 
 .hero__intro {
-  // width: 320px;
-  // height: 72px;
-  margin: 0;
-  // margin: 27px 0 25px;
+  width: 320px;
+  height: 72px;
+  margin: 27px 0 25px;
 
-  // font-family: $main-font;
-  // font-size: 36px;
-  // line-height: 36px;
+  font-family: $main-font;
+  font-size: 36px;
+  line-height: 36px;
 
-  // color: $white;
-  // text-align: center;
+  color: $white;
+  text-align: center;
 
-  // @media (min-width: $breakpoint-tablet) {
-  //   width: 420px;
-  //   height: 120px;
-  //   margin: 0 0 40px 90px;
+  @media (min-width: $breakpoint-tablet) {
+    width: 420px;
+    height: 120px;
+    margin: 0 0 40px 90px;
 
-  //   font-size: 60px;
-  //   line-height: 60px;
+    font-size: 60px;
+    line-height: 60px;
 
-  //   color: $black;
-  //   text-align: left;
-  // }
+    color: $black;
+    text-align: left;
+  }
 
-  // @media (min-width: $breakpoint-desktop) {
-  //   margin-top: 110px;
-  // }
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 110px;
+  }
 }
 
 .hero__slogan {
-  // width: 320px;
-  // height: 14px;
-  margin: 0;
-  // margin: 0  0 29px 90px;
+  width: 320px;
+  height: 14px;
+  margin: 0  0 29px 90px;
 
-  // font-family: $main-font;
-  // line-height: 14px;
+  font-family: $main-font;
+  line-height: 14px;
 
-  // color: $white;
-  // text-transform: uppercase;
-  // text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
 
-  // @media (min-width: $breakpoint-tablet) {
-  //   width: 283px;
-  //   height: 20px;
-  //   margin-bottom: 50px;
+  @media (min-width: $breakpoint-tablet) {
+    width: 283px;
+    height: 20px;
+    margin-bottom: 50px;
 
-  //   font-size: 20px;
-  //   line-height: 20px;
+    font-size: 20px;
+    line-height: 20px;
 
-  //   color: $black;
-  //   text-align: left;
-  // }
+    color: $black;
+    text-align: left;
+  }
 
-  // @media (min-width: $breakpoint-desktop) {
-  //   margin-bottom: 52px;
-  // }
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 52px;
+  }
 }
 
 .hero__button {
   margin: 0;
-  //   width: 280px;
-  //   height: 40px;
+  width: 280px;
+  height: 40px;
 
-  //   font-family: $main-font;
-  //   font-size: 16px;
-  //   line-height: 20px;
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 20px;
 
-  //   order: 4;
+  order: 4;
 
-  //   @media (min-width: $breakpoint-tablet) {
-  //     width: 244px;
-  //     height: 54px;
-  //     margin: 0;
-  //     // margin-left: 90px;
+  @media (min-width: $breakpoint-tablet) {
+    width: 244px;
+    height: 54px;
+    margin: 0;
+    margin-left: 90px;
 
-  //     font-size: 20px;
-  //     line-height: 26px;
+    font-size: 20px;
+    line-height: 26px;
 
-  //     order: 0;
-  //     z-index: 1;
-  //   }
+    order: 0;
+    z-index: 1;
+  }
 }
 
 .hero__image {
 
 
-  // display: block;
+  display: block;
 
   margin: 0;
-  // margin-bottom: 3px;
+  margin-bottom: 3px;
 
-  // z-index: -1;
+  z-index: -1;
 
-  // @media (min-width: $breakpoint-tablet) {
-  //   margin-top: -87px;
-  // }
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: -87px;
+  }
 
-  // @media (min-width: $breakpoint-desktop) {
-  //   position: relative;
-  //   left: 557px;
+  @media (min-width: $breakpoint-desktop) {
+    position: relative;
+    left: 557px;
 
-  //   margin: 0;
-  //   margin-top: -352px;
-  // }
+    margin: 0;
+    margin-top: -352px;
+  }
 }
